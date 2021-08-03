@@ -1,0 +1,82 @@
+<l-message />
+
+<view class="pages">
+    <view id="prepare" wx:if="{{order['is_paid']&&order.status==1}}" >当前订单正在准备，请按预约时间取餐</view>
+    <view class="space"></view>
+    <view class="item" >
+        <view class="isPaid">
+            <view class="tips">交易状态</view>
+            <view wx:if="{{!order['is_paid']}}" >未接单</view>
+            <view style="color:rgb(247, 119, 119);">{{status[order.status+2]}}</view>
+        </view>
+        <view class="carts" 
+        wx:for="{{order.carts}}"
+        wx:for-item = "item1"
+        wx:key="carts"
+        >
+            <view class='productImg_cart'>
+                <image  
+                src="{{imgBaseUrl+item1.photo}}" 
+                mode="aspectFill" />
+            </view>
+            <view class="cartInfo">
+                <view class="cartName">{{item1.name}}</view>
+                <view class="amount">x{{item1.amount}}</view>
+            </view>
+            <view class="cartPrice">￥{{item1.price}}</view>
+        </view>
+        <view class='total'>合计￥{{order.total}}</view>
+    </view>
+    <view class="space"></view>
+    <view class="orderInfo">
+        <view class="top">订单信息</view>
+        <view class="Info">
+            <view class="left">
+                订单id
+            </view>
+            <view class="right">
+                {{order.id}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                下单时间
+            </view>
+            <view class="right">
+                {{order.created_at}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                预约取餐时间
+            </view>
+            <view class="right">
+                {{order.appointment}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                备注
+            </view>
+            <view class="right">
+                {{order.comments}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                姓名
+            </view>
+            <view class="right">
+                {{userInfo.name}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                学号
+            </view>
+            <view class="right">
+                {{userInfo.stu_id}}
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,101 @@
+<l-message />
+
+<view class="pages">
+    <view class="space"></view>
+    <view class="item" >
+        <view class="isPaid">
+            <view class="tips">交易状态</view>
+            <view wx:if="{{!order['is_paid']}}" >未支付</view>
+            <view wx:else>已支付</view>
+            <view style="color:rgb(247, 119, 119);">{{status[order.status+2]}}</view>
+        </view>
+        <view class="carts" 
+        wx:for="{{order.carts}}"
+        wx:for-item = "item1"
+        wx:key="carts"
+        >
+            <view class='productImg_cart'>
+                <image  
+                src="{{imgBaseUrl+item1.photo}}" 
+                mode="aspectFill" />
+            </view>
+            <view class="cartInfo">
+                <view class="cartName">{{item1.name}}</view>
+                <view class="amount">x{{item1.amount}}</view>
+            </view>
+            <view class="cartPrice">￥{{item1.price}}</view>
+        </view>
+        <view class='total'>合计￥{{order.total}}</view>
+    </view>
+    <view class="space"></view>
+    <view class="orderInfo">
+        <view class="top">订单信息</view>
+        <view class="Info">
+            <view class="left">
+                订单id
+            </view>
+            <view class="right">
+                {{order.id}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                客户姓名
+            </view>
+            <view class="right">
+                {{order.user.name}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                客户学号
+            </view>
+            <view class="right">
+                {{order.user.stu_id}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                客户电话
+            </view>
+            <view class="right">
+                {{order.user.phone}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                下单时间
+            </view>
+            <view class="right">
+                {{order.created_at}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                预约取餐时间
+            </view>
+            <view class="right">
+                {{order.appointment}}
+            </view>
+        </view>
+        <view class="Info">
+            <view class="left">
+                备注
+            </view>
+            <view class="right">
+                {{order.comments||''}}
+            </view>
+        </view>
+    </view>
+    <view class="space"></view>
+    <l-button plain size='long' bindtap="rec" wx:if="{{!order.is_paid}}">接单</l-button>
+    <view wx:elif="{{order.status!=2}}" class="orderInfo">
+        已接单！！！请在{{order.appointment}}前完成当前订单
+        <text>\n</text>
+        <l-button size='long' plain bindtap='getMoney'>已收款</l-button>
+    </view>
+    <view wx:else class="orderInfo">
+        订单已完成
+        <text>\n</text>
+    </view>
+</view>

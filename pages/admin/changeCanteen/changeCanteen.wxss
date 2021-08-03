@@ -1,0 +1,16 @@
+/* pages/admin/changeCanteen/changeCanteen.wxss */
+.l-form-btn-class{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+
+
+.picker{
+  color:rgb(123,123,123);
+  padding:10rpx;
+}
+
+.active{
+  color:rgb(238, 81, 81);
+}

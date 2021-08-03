@@ -1,0 +1,32 @@
+<l-card plaintext>
+  <!-- 自定义描述内容 -->
+<l-steps direction="column" >
+  <l-step title="程序简介">
+    <view class="describe-container" slot="describe">
+      欢迎来到深圳技术大学饭堂点餐小程序！<text>\n</text>
+      您可在主页选择所要下单的餐厅，在点餐主页选择想吃的菜品，然后选择下单支付（目前一卡通尚未交付功能需求程序，需要到现场取餐时支付刷卡）。<text>\n</text>
+      点餐支持预约功能，提前选择自己用餐时间，不再为排队等候而烦恼。<text>\n</text>
+      如遇到用餐质量问题、小程序使用问题，请联系我们，我们一定尽快处理。<text>\n</text>
+    </view>
+  </l-step>
+  <l-step title="程序特色">
+    <view class="describe-container" slot="describe">
+      1. 本程序使用的是框架型，交付使用的时候仅为一个程序框架，程序所有者可以自行添加餐厅以及分类商品等。<text>\n</text>
+      2. 程序集管理端与使用端于一体，避免多端同时操作带来的困扰。<text>\n</text>
+      3. 本程序并不主动采集微信用户的任何信息，使用的一切数据均来自于私有云后端。<text>\n</text>
+    </view>
+  </l-step>
+  <l-step title="项目成员">
+    <view class="describe-container" slot="describe">
+      <ul>       
+        <li>项目经理：刘星廷</li><text>\n</text>
+        <li>后端开发：余圳曦</li><text>\n</text>
+        <li>前端开发：邓崇森</li><text>\n</text>
+        <li>UI设计：邓宇鹏</li><text>\n</text>
+      </ul>
+    </view>
+  </l-step>
+  <l-step title="©All Copyright is Reaserved At 2021">
+  </l-step>
+</l-steps>
+</l-card>

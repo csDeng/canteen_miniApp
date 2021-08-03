@@ -1,0 +1,319 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": false,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.17.0",
+  "appid": "wx35ec554d8f18623a",
+  "projectname": "%E7%9F%B3%E4%BA%95%E9%A4%90%E5%8E%85",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shijing/shijing",
+          "pathName": "pages/shijing/shijing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/0/0",
+          "pathName": "pages/0/0",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/1/1",
+          "pathName": "pages/1/1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/admin",
+          "pathName": "pages/admin/admin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/register/register",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/canteenAdmin/canteenAdmin",
+          "pathName": "pages/admin/canteenAdmin/canteenAdmin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/userAdmin/userAdmin",
+          "pathName": "pages/admin/userAdmin/userAdmin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/canteenAdmin/canteenAdmin",
+          "pathName": "pages/admin/canteenAdmin/canteenAdmin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/addCantin/addCantin",
+          "pathName": "pages/admin/addCantin/addCantin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/addCanteen/addCanteen",
+          "pathName": "pages/admin/addCanteen/addCanteen",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/changeCanteen/changeCanteen",
+          "pathName": "pages/admin/changeCanteen/changeCanteen",
+          "query": "id=7",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/userAdmin/userAdmin",
+          "pathName": "pages/admin/userAdmin/userAdmin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/category/category",
+          "pathName": "pages/admin/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/addCategory/addCategory",
+          "pathName": "pages/admin/addCategory/addCategory",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/product/product",
+          "pathName": "pages/admin/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/product/product",
+          "pathName": "pages/admin/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/category/category",
+          "pathName": "pages/admin/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/product/product",
+          "pathName": "pages/admin/product/product",
+          "query": "canteen_id=1&&category_id=3",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen/canteen",
+          "pathName": "pages/canteen/canteen",
+          "query": "id=7",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen/canteen",
+          "pathName": "pages/canteen/canteen",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/prePay/prePay",
+          "pathName": "pages/prePay/prePay",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen/canteen",
+          "pathName": "pages/canteen/canteen",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen/canteen",
+          "pathName": "pages/canteen/canteen",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/adminOrder/adminOrder",
+          "pathName": "pages/admin/adminOrder/adminOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/update/update",
+          "pathName": "pages/update/update",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen/canteen",
+          "pathName": "pages/canteen/canteen",
+          "query": "id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/orderInfo/orderInfo",
+          "pathName": "pages/orderInfo/orderInfo",
+          "query": "id=48",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/adminOrder/adminOrder",
+          "pathName": "pages/admin/adminOrder/adminOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/adminOrder/adminOrder",
+          "pathName": "pages/admin/adminOrder/adminOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/register/register",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/canteenAdmin/canteenAdmin",
+          "pathName": "pages/admin/canteenAdmin/canteenAdmin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/product/product",
+          "pathName": "pages/admin/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/product/product",
+          "pathName": "pages/admin/product/product",
+          "query": "category_id=8 &&canteen_id=24",
+          "scene": null
+        },
+        {
+          "name": "pages/feedback/feedback",
+          "pathName": "pages/feedback/feedback",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/userAdmin/userAdmin",
+          "pathName": "pages/admin/userAdmin/userAdmin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/adminOrder/adminOrder",
+          "pathName": "pages/admin/adminOrder/adminOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/canteenAdmin/canteenAdmin",
+          "pathName": "pages/admin/canteenAdmin/canteenAdmin",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

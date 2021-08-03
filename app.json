@@ -1,0 +1,88 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/admin/admin",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/canteen/canteen",
+    "pages/admin/canteenAdmin/canteenAdmin",
+    "pages/admin/userAdmin/userAdmin",
+    "pages/admin/addCanteen/addCanteen",
+    "pages/admin/changeCanteen/changeCanteen",
+    "pages/admin/addUser/addUser",
+    "pages/admin/category/category",
+    "pages/admin/addCategory/addCategory",
+    "pages/admin/product/product",
+    "pages/admin/addProduct/addProduct",
+    "pages/admin/adminOrder/adminOrder",
+    "pages/admin/adminOrderInfo/adminOrderInfo",
+    "pages/admin/adminUpload/adminUpload",
+    "pages/prePay/prePay",
+    "pages/update/update",
+    "pages/about/about",
+    "pages/orderInfo/orderInfo",
+    "pages/feedback/feedback",
+    "pages/changeUser/changeUser"
+
+
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#002F93",
+    "navigationBarTitleText": "SZTU点餐平台",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  
+    "usingComponents": {
+      "l-card": "/miniprogram_npm/lin-ui/card/index",
+      "l-button":"/miniprogram_npm/lin-ui/button/index",
+      "l-form":"/miniprogram_npm/lin-ui/form/index",
+      "l-form-item":"/miniprogram_npm/lin-ui/form-item/index",
+      "l-textarea":"/miniprogram_npm/lin-ui/textarea/index",
+      "l-input":"/miniprogram_npm/lin-ui/input/index",
+      "l-radio-group":"/miniprogram_npm/lin-ui/radio-group/index",
+      "l-radio":"/miniprogram_npm/lin-ui/radio/index",
+      "l-collapse":"/miniprogram_npm/lin-ui/collapse/index",
+      "l-collapse-item":"/miniprogram_npm/lin-ui/collapse-item/index",
+      "l-popup":"/miniprogram_npm/lin-ui/popup/index",
+      "l-message":"/miniprogram_npm/lin-ui/message/index",
+      "l-dialog ":"/miniprogram_npm/lin-ui/dialog/index",
+      "l-list":"/miniprogram_npm/lin-ui/list/index",
+      "l-icon":"/miniprogram_npm/lin-ui/icon/index",
+      "l-loading":"/miniprogram_npm/lin-ui/loading/index",
+      "van-button": "/miniprogram_npm/@vant/weapp/button/index"
+    },
+  
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#87CEFA",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icons/index.png",
+        "selectedIconPath": "./icons/index-cur.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text":"订单",
+        "iconPath": "./icons/order.png",
+        "selectedIconPath": "./icons/order.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./icons/my.png",
+        "selectedIconPath": "./icons/my.png"
+      }
+    ]
+
+  }
+}

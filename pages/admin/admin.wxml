@@ -1,0 +1,7 @@
+<view class="main">
+  <l-list title="餐厅管理" bindtap="gotocantenAdmin" desc="添加、删除、修改餐厅信息" />
+  <l-list title="分类管理" bindtap="gotoCategory" desc="所有分类的管理" />
+  <l-list title="订单管理" bindtap="gotoOrder" desc="客户下单详情" />
+  <l-list title="用户管理" bindtap="gotoUserAdmin" desc="注册用户列表" />
+  <l-list title="上传轮播图" bindtap="gotoUserAdmin" desc="更改首页轮播图" />
+</view>

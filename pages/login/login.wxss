@@ -1,0 +1,55 @@
+@import "../../app.wxss";
+
+.main{
+    background: rgb(241,242,246);
+    width:100vw;
+    height:100vh;
+}
+.logo{
+    width:26vw;
+    height:35%;
+    margin:0rpx auto;
+    display: flex;
+    
+    
+}
+.logo image{
+    width:200rpx;
+    height:200rpx;
+    margin-top: 131rpx;
+    overflow: hidden;
+    border-radius: 50% ;
+}
+
+.item{
+    width:80vw;
+    margin:0 auto;
+    display: flex;
+    padding:20rpx;
+}
+.item label{
+    flex:2;
+}
+.item input{
+    flex:5;
+}
+button{
+    margin-top:20rpx;
+    padding:10rpx;
+}
+
+.main #form{
+    width:80vw;
+    height:23vh;
+    margin:32rpx auto;
+    border-radius: 30rpx;
+    background: #fff;
+    box-shadow:10px 10px 10px rgb(216, 210, 210);
+}
+
+#image{
+    width:145px;
+    height: 37px;
+    margin-right:22px;
+    
+}

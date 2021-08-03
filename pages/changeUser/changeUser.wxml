@@ -1,0 +1,25 @@
+<l-form name="user" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit"
+bind:linreset='reset'
+>
+    <l-form-item label="名字:" name="name">
+        <l-input id="name" value="{{user.name}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+
+   
+
+    <l-form-item label="电话:" name="phone">
+        <l-input id="phone" value="{{user.phone}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+
+  <view class="btn">
+      <view slot="submit">
+        <l-button plain>确认修改</l-button>
+    </view>
+    <view slot="reset">
+        <l-button type="default" plain>重置信息</l-button>
+    </view>
+  </view>
+    
+</l-form>
+
+<l-message />

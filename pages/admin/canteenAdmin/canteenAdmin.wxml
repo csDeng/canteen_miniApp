@@ -1,0 +1,49 @@
+<view class="main">
+
+  <!-- 添加餐厅 -->
+  <l-button plain="{{true}}" size="long" bindtap="gotoAdd">添加餐厅</l-button>
+
+
+  <view class="canteen">
+    <!-- 显示餐厅的信息 -->
+    <l-card 
+     type="primary" 
+      full="{{true}}"
+      plaintext="{{true}}"
+      > 餐厅列表信息 </l-card>
+    <view class="canteenInfo">
+      <view wx:for="{{ canteenList }}" wx:for-item="item" wx:for-index='index' class="item" wx:key="item">
+        <view>
+          <l-card type="primary" image="{{ item.photo }}" title="{{ item.title }}" image-mode="aspectFill">
+            <view class="content">
+              <view>餐厅的id:{{ item.id }}</view>
+              <view>名字：{{ item.name }}</view>
+              <view>英文:{{ item.english_name }}</view>
+              <view>简介：{{ item.description }}</view>
+              <view>地址：{{ item.location }}</view>
+              <view id='time'><text>营业时间：\n</text>
+            <text>早餐：{{item['breakfast_open_time']}}-{{item['breakfast_close_time']}}\n</text>
+            <text>午餐：{{item['lunch_open_time']}}-{{item['lunch_close_time']}}\n</text>
+            <text>晚餐：{{item['dinner_open_time']}}-{{item['dinner_close_time']}}\n</text>
+            </view>
+              <block>
+                <view wx:if="{{item.status}}">在前台展示</view>
+                <view wx:else>不在前台展示</view>
+              </block>
+            </view>
+          </l-card>
+        </view>
+
+        <!-- 对餐厅进行管理 -->
+        <view class="admin">
+          <l-button type="default" plain="true" bindtap='uploadImg' data-index='{{item.id}}'>上传餐厅图片</l-button>
+          <l-button type="default" plain="true" bindtap='changeCanteen' data-index="{{item.id}}">修改餐厅信息</l-button>
+          <l-button type="error" 
+          plain="true" 
+          bindtap='delCanteen' 
+          data-index='{{item.id}}'>删除餐厅</l-button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

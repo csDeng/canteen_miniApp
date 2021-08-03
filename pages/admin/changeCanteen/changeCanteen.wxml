@@ -1,0 +1,100 @@
+<l-form name="canteen" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit"
+bind:linreset='reset'
+>
+    <l-form-item label="餐厅名字:" name="name">
+        <l-input id="name" value="{{canteen.name}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+    <l-form-item label="英文名字:" name="english_name">
+        <l-input id="english_name" value="{{canteen.english_name}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+    <l-form-item label="餐厅描述:" name="description">
+        <l-textarea 
+        id="description" 
+        value="{{canteen.description}}" 
+        hide-label show-row="{{false}}"
+        auto-height="{{true}}"
+        border="{{false}}"
+        />
+    </l-form-item>
+
+    <l-form-item label="地址:" name="location">
+        <l-input id="location" value="{{canteen.location}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+
+    <l-form-item label="是否在前台展示:" name="status">
+        <l-radio-group current="1" id="status" placement="row" >
+            <l-radio key="1">
+                展示
+            </l-radio>
+            <l-radio key="0">
+                不展示
+            </l-radio>
+        </l-radio-group>
+    </l-form-item>
+
+
+  <picker mode="time" value="{{breakfast_open_time}}" start="7:00" end="12:00" 
+  bindtap="bindTimeChange"
+  bindchange="bindTimeChange" data-tid='1'>
+    <view class="picker {{activeId=='1' ? 'active' : ''}}">
+      请选择早餐开始时间: {{breakfast_open_time}}
+    </view>
+  </picker>
+
+  <picker mode="time" value="{{breakfast_close_time}}" start="7：00" end="12:0" 
+  bindtap="bindTimeChange"
+  bindchange="bindTimeChange" data-tid='2'>
+    <view  class="picker {{activeId=='2' ? 'active' : ''}}">
+      请选择早餐结束时间: {{breakfast_close_time}}
+    </view>
+  </picker>
+
+
+
+
+  <picker mode="time" value="{{lunch_open_time}}" start="09:01" end="17:01" 
+  bindtap="bindTimeChange"
+  bindchange="bindTimeChange" data-tid='3'>
+    <view  class="picker {{activeId=='3' ? 'active' : ''}}">
+      请选择午餐开始时间: {{lunch_open_time}}
+    </view>
+  </picker>
+
+
+  <picker mode="time" value="{{lunch_close_time}}" start="09:01" end="17:01" 
+  bindtap="bindTimeChange"
+  bindchange="bindTimeChange" data-tid='4' >
+    <view  class="picker {{activeId=='4' ? 'active' : ''}}">
+      请选择午餐结束时间: {{lunch_close_time}}
+    </view>
+  </picker>
+
+
+  <picker mode="time" value="{{dinner_open_time}}" start="17:01" end="23:01" 
+  bindtap="bindTimeChange"
+  bindchange="bindTimeChange" data-tid='5'>
+    <view  class="picker {{activeId=='5' ? 'active' : ''}}">
+      请选择晚餐开始时间: {{dinner_open_time}}
+    </view>
+  </picker>
+
+
+  <picker mode="time" value="{{dinner_close_time}}" start="17:01" end="23:01" 
+  bindtap="bindTimeChange"
+  bindchange="bindTimeChange" data-tid='6'>
+    <view  class=" picker {{activeId=='6' ? 'active' : ''}}">
+      请选择晚餐结束时间: {{dinner_close_time}}
+    </view>
+  </picker>
+
+
+
+
+
+    <view slot="submit">
+        <l-button>确认修改</l-button>
+    </view>
+    <view slot="reset">
+        <l-button type="default" plain>重置</l-button>
+    </view>
+</l-form>

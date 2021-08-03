@@ -1,0 +1,13 @@
+<l-card plaintext>
+  <view class="text">如果您在使用过程中出现了bug，请您花一点点时间点击下面的按钮将bug告诉我们哦，我们一定尽快修复！</view>
+
+
+</l-card>
+<view id="btn">
+  <l-button special="{{true}}"  id="btn" open-type="feedback">
+    <view class="container">
+      <l-icon size="40" name="customer-service" color="#3683d6" />
+      <text class="describe">问题反馈</text>
+    </view>
+    </l-button>
+</view>

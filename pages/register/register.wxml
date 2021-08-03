@@ -1,0 +1,26 @@
+<view class="main">
+    <div class="logo">
+        <image src="../../icons/logo.png" mode="aspectFit"></image>
+    </div>
+   <form>
+       <view class="item">
+            <label>用户名：</label>
+            <input type="text" name="user_name" bindblur="getUserName" placeholder="请输入用户名" />
+       </view>
+       <view class="item">
+        <label>学号：</label>
+        <input type="text" name="stu_id" bindblur="getstu_id" placeholder="请输入学号" />
+   </view>
+       <view class="item">
+           <label>密 码：</label><input type="password" name="pwd" bindblur="getpwd" placeholder="请输入6-20位密码"/>
+       </view> 
+       <view class="item">
+            <input type="text" name="code" bindblur="getInputCode" placeholder="请输入验证码" value="{{captcha}}" /> 
+            <view  wx:if="{{image}}">
+                <image src="{{image}}" id="image" mode="scaleToFill" bindtap="getCode" />
+            </view>
+       </view>
+   </form>
+   <button bindtap="Register">注册</button>
+</view>
+<l-message></l-message>

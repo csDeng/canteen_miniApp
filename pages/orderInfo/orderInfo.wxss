@@ -1,0 +1,81 @@
+.pages {
+  font-size: small;
+  color: #999999;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(rgb(0,47,147), #ffffff);
+}
+.pages #prepare {
+  width: 675rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 10rpx auto;
+  background: #fff;
+  border-radius: 0 0 30rpx 30rpx;
+  color: #f52b2b;
+}
+.pages .space {
+  height: 50rpx;
+}
+.pages .item {
+  background: #fff;
+  width: 675rpx;
+  margin: 0 auto;
+  border-radius: 30rpx;
+}
+.pages .item .isPaid {
+  height: 14px;
+  border-radius: 30rpx 30rpx 0   0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #fafafa;
+}
+.pages .item .carts {
+  display: flex;
+  height: 120px;
+  flex-direction: row;
+}
+.pages .item .carts .productImg_cart {
+  width: 100px;
+  height: 120px ;
+}
+.pages .item .carts .productImg_cart image {
+  padding: 10px;
+  width: 90px;
+  height: 90px !important;
+}
+.pages .item .carts .cartInfo {
+  flex: 2;
+  padding: 75rpx 79rpx;
+  display: flex;
+  flex-direction: column;
+}
+.pages .item .carts .cartInfo .cartName {
+  font-size: 12px;
+  color: #333333;
+}
+.pages .item .carts .cartPrice {
+  margin: 30px 20px;
+}
+.pages .total {
+  color: #999999;
+  position: relative;
+  left: 53vw;
+  padding: 20rpx;
+}
+.pages .orderInfo {
+  width: 630rpx;
+  margin: 0 auto;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background: white;
+}
+.pages .Info {
+  color: #666666;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+}

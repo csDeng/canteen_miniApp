@@ -1,0 +1,13 @@
+{
+  "usingComponents":{
+    "van-goods-action": "/miniprogram_npm/@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "/miniprogram_npm/@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "/miniprogram_npm/@vant/weapp/goods-action-button/index",
+    "van-sidebar": "/miniprogram_npm/@vant/weapp/sidebar/index",
+    "van-sidebar-item": "/miniprogram_npm/@vant/weapp/sidebar-item/index",
+    "l-counter": "/miniprogram_npm/lin-ui/counter/index",
+    "l-price":"/miniprogram_npm/lin-ui/price/index",
+    "van-cell": "@vant/weapp/cell/index",
+   "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}

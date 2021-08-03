@@ -1,0 +1,215 @@
+
+.page{
+    background: #fff;
+    height:100%;
+    border-radius: 50rpx 50rpx 0 0 ;
+}
+.B_canteen{
+  background: rgb(0,47,147);
+  height:38rpx;
+}
+.canteen {
+  display: flex;
+  height: 15vh;
+  width:85%;
+  margin:0 auto;
+  background: #fff;
+  border-radius: 20rpx 20rpx 0 0 ;
+  /* border-bottom: 1px solid #000; */
+}
+.canteen #logo {
+
+  width: 213rpx;
+  height: 139rpx;
+  margin: 23rpx ;
+
+}
+.canteen .introduction {
+  /* color: #fff; */
+  width:100%;
+
+ 
+}
+.canteen .introduction .name {
+  font-size: 32rpx;
+  margin: 5rpx;
+}
+.enname{
+  font-size: small;
+}
+.canteen .introduction .address {
+  /* margin-left: 32rpx;  */
+  padding: 0 0 10rpx ;
+}
+.canteen .introduction .address #location {
+  font-size: 30rpx;
+}
+ #time {
+  font-size:small;
+}
+
+
+.show{
+  margin-top: 15vh;
+  border-radius:50rpx 50rpx 0 0 ;
+}
+
+.main {
+  display: flex;
+  margin-top: 15vh;
+}
+
+.main .right {
+  
+  width:80%;
+}
+.main .right #scroll {
+  /* height: 70vh; */
+  display: flex;
+}
+.main .right #scroll .productBox {
+  display: flex;
+  height: 170rpx;
+  /* border-bottom: 1px solid #ccc; */
+}
+.main .right #scroll .productBox .productImg {
+  flex: 3;
+  width: 160rpx;
+  height: 135rpx !important;
+  padding: 20rpx 1rpx;
+  border-radius: 25px;
+}
+.main .right #scroll .productBox .productChoose {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  padding-left: 40rpx;
+}
+.main .right #scroll .productBox .productChoose .productName {
+  font-size: 27rpx;
+  padding-top: 36rpx;
+}
+.main .right #scroll .productBox .productChoose .productPrice {
+  font-size: 33rpx;
+  color: #eb8787;
+  padding-top: 36rpx;
+}
+.main .right #scroll .productBox .productChoose .productPrice #moneyLogo {
+  font-size: 27rpx;
+  color: #ccc;
+}
+.main .right #scroll .productBox .productAdd {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .right #scroll .productBox .productAdd image {
+  width: 60rpx;
+  height:60rpx;
+} 
+
+
+/* 弹出购物车样式开始 */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content view {
+  display: flex;
+  height: 125rpx;
+  flex-direction: row;
+}
+.content view .productImg_cart {
+  flex: 1;
+}
+.content view .cartInfo {
+  flex: 5;
+  display: flex;
+  padding-left:30rpx;
+  overflow: hidden;
+}
+.cartName{
+  width:200rpx;
+}
+.cartPrice{
+  width:200rpx;
+}
+.content view .amount {
+  flex: 10          ;
+
+
+}
+.content view .amount #num {
+  width: 50rpx;
+}
+.content view .amount #num text {
+  margin-left: 16rpx;
+}
+.content view .amount .addMius {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+/* 购物车按钮 */
+.btn{
+  width:80%;
+}
+
+.space{
+  height:30rpx;
+}
+
+/* 购物车样式结束 */
+
+
+
+/* 商品弹出层的样式 */
+.shop{
+  width:670rpx;
+  height:720rpx;
+  padding-left: 30rpx;
+}
+.sName{
+  font-size: 36rpx;
+}
+
+.sImage image{
+  width:574rpx;
+  height:440rpx;
+
+}
+
+
+.sDesrciption{
+  width:580rpx;
+  height:190rpx;
+  color:#302f2f;
+  font-size:24rpx;
+  overflow: hidden;
+  overflow-y:scroll;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+.sSelect{
+  display: flex;
+  width:670rpx;
+  padding-top: 10rpx;
+  justify-content: space-between;
+}
+
+#gotoCart{
+  padding-right:93rpx;
+}
+
+
+/* 商品弹出层的样式结束 */
+
+@media screen and (max-width: 330px){
+  .van-button{
+  margin-right: -130rpx !important;
+}
+}

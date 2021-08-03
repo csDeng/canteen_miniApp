@@ -1,0 +1,78 @@
+.pages {
+  font-size: smaller;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(rgb(0,47,147), #ffffff);
+}
+.pages .userInfo {
+  width: 93vw;
+  height: 240rpx;
+  border-radius: 0  0 30rpx 30rpx ;
+  margin: 0 auto  10rpx;
+  text-align: center;
+  background: #fff;
+}
+.pages .userInfo .section {
+  margin: 56rpx auto;
+}
+.body {
+  display: flex;
+  background: #fff;
+  width: 93vw;
+  margin: 30px auto;
+  border-radius: 30rpx;
+  flex-direction: column;
+}
+.body view {
+  display: flex;
+  height: 110px;
+  flex-direction: row;
+}
+.body view .productImg_cart {
+  width: 100px;
+  height: 120px ;
+}
+.body view .productImg_cart image {
+  padding: 10px;
+  width: 90px;
+  height: 90px !important;
+}
+.body view .cartInfo {
+  flex: 2;
+  padding-left: 117rpx;
+  display: flex;
+  flex-direction: column;
+}
+.body view .cartInfo .cartName {
+  font-size: smaller;
+  padding:62rpx 0 0;
+  color: #333333;
+}
+.body view .cartInfo .amount {
+  color: #999999;
+}
+.body view .cartPrice {
+  margin: 30px 20px;
+}
+.leave {
+  width: 93vw;
+  height: 50px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+/* .van-button, .van-submit-bar__button{
+  background: rgb(0,47,147) !important;
+}
+*/
+/* 强制更改vant组件的样式颜色 */
+.van-button--danger{
+  border-color:rgb(0,47,147) !important;
+} 
+
+.van-submit-bar__button, .van-button,.van-button--danger, van-button__text {
+  background: rgb(0,47,147) !important;
+  border-radius: 50rpx;
+  overflow: hidden;
+}

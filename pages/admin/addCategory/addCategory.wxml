@@ -1,0 +1,28 @@
+<l-card plaintext='{{true}}'>
+        <l-form name="category" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit" bind:linreset='reset'>
+          <l-form-item label="所属餐厅id" name="canteen_id">
+            <l-input id="canteen_id" value="{{category.canteen_id}}" hide-label show-row="{{false}}" />
+          </l-form-item>
+
+          <l-form-item label="类别:" name="name">
+            <l-input id="name" value="{{category.name}}" hide-label show-row="{{false}}" auto-height="{{true}}"
+              border="{{false}}" />
+          </l-form-item>
+          <l-form-item label="英文:" name="english_name">
+            <l-input id="english_name" value="{{category.english_name}}" hide-label show-row="{{false}}" auto-height="{{true}}"
+              border="{{false}}" />
+          </l-form-item>
+          <l-form-item label='是否在前台展示'  required
+        name='status' label-placement="column" >
+          <l-radio-group id='status' current="{{1}}" >
+         <l-radio key="{{0}}" >不显示</l-radio>
+        <l-radio key="{{1}}">显示</l-radio>
+      </l-radio-group>
+      </l-form-item>
+
+          <view slot="submit">
+            <l-button plain type='success'>确认添加</l-button>
+          </view>
+        </l-form>
+        <l-button class='pupop-close' bindtap='changeShow' plain>取消</l-button>
+      </l-card>

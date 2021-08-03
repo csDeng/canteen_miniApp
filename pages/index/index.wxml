@@ -1,0 +1,32 @@
+<view class="main">
+    <!-- 轮播图开始 -->
+    <view class="index_swiper">
+        <swiper indicator-dots="{{indicatorDots}}" 
+            indicator-color="white" 
+            indicatorActiveColor="#87CEFA" 
+            autoplay="{{autoplay}}" 
+            easing-function="{{easingFunction}}" 
+            duration="{{duration}}"
+            interval="{{interval}}">
+            <swiper-item wx:for="{{swiperList}}" wx:key="goods_id" class="swiper_img">
+                    <image src="{{item.image_src}}" mode="aspectFill"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 轮播图结束 -->
+
+    <!-- 餐厅按钮 -->
+    <view id="fantang">
+            <view class='item' hover-class='Uhover'
+              wx:for="{{fantang}}" wx:key="fantang"  data-id='{{item.obj.id}}' bindtap='goToCanteen' >
+               <image src='/icons/canteen.png' mode='aspectFit' id='canteenLogo'/>
+               <view class="name">
+                    <view class="text" >{{item.obj.name}}</view>
+                    <view class="text" >{{item.obj.english_name}}</view>
+               </view>
+
+            </view>
+
+    </view>
+</view>
+    

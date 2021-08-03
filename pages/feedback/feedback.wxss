@@ -1,0 +1,11 @@
+.text{
+  font-size:30rpx;
+  line-height: 52rpx;
+  color:#4b4a4a;
+}
+
+#btn{
+  display: flex;
+  justify-content: center;
+}
+

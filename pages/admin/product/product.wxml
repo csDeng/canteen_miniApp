@@ -1,0 +1,93 @@
+<view class="main">
+
+  <!-- 添加商品 -->
+  <l-button plain="{{true}}" size="long" bindtap="gotoAdd">添加商品</l-button>
+
+
+  <view class="canteen">
+    <!-- 显示商品的信息 -->
+    <l-card type="primary" full="{{true}}" plaintext="{{true}}"> 商品列表信息 </l-card>
+    <view class="canteenInfo">
+      <view wx:for="{{ List }}" wx:for-item="item" wx:for-index='index' class="item" wx:key="item">
+        <view>
+          <l-card type="primary" image="{{ item.photo }}" title="{{ item.title }}" image-mode="aspectFill">
+            <view class="content">
+              <view>商品的id:{{ item.id }}</view>
+              <view>商品名字：{{ item.name }}</view>
+              <view>英文名字：{{ item.english_name }}</view>
+              <view>商品价格：{{ item.price }}</view>
+              <view>商品描述：{{ item.description }}</view>
+              <view>商品权重（越大越靠前）：{{ item.top }}</view>
+
+              <!-- <view>创建时间：{{ item.created_at }}</view>
+            <view>更新时间：{{ item.updated_at }}</view> -->
+              <block>
+                <view wx:if="{{item.status}}">在前台展示</view>
+                <view wx:else>不在前台展示</view>
+              </block>
+            </view>
+          </l-card>
+        </view>
+
+        <!-- 对商品进行管理 -->
+        <view id="btnAdmin">
+          <l-button type="default" plain="true" bindtap='uploadImg' data-index='{{item.id}}'>上传商品图片</l-button>
+          <l-button type="default" plain="true" 
+          bindtap='change' 
+          data-shop="{{item}}">修改商品信息</l-button>
+          <l-button type="error" plain="true" bindtap='delCanteen' data-index='{{item.id}}'>删除商品</l-button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 商品信息更改弹框 -->
+
+    <l-popup show="{{show}}" content-align="top" locked="{{true}}">
+      <view class='pupop-content'>
+        <l-card plaintext='{{true}}'>
+          <l-form name="shop" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit" bind:linreset='reset'>
+            <l-form-item label="商品名字:" name="name">
+              <l-input id="name" value="{{shop.name}}" hide-label show-row="{{false}}" />
+            </l-form-item>
+
+            <l-form-item label="英文名字:" name="english_name">
+              <l-input id="english_name" value="{{shop.english_name}}" hide-label show-row="{{false}}" auto-height="{{true}}"
+                border="{{false}}" />
+            </l-form-item>
+
+            <l-form-item label="商品价格:" name="price">
+              <l-input id="price" value="{{shop.price}}" hide-label show-row="{{false}}" auto-height="{{true}}"
+                border="{{false}}" />
+            </l-form-item>
+
+            <l-form-item label="商品描述:" name="description">
+              <l-input id="description" value="{{shop.description}}" hide-label show-row="{{false}}" auto-height="{{true}}"
+                border="{{false}}" />
+            </l-form-item>
+
+
+          <l-form-item label="排序权重:" name="top">
+            <l-input id="top" value="{{shop.top}}" hide-label show-row="{{false}}" auto-height="{{true}}"
+              border="{{false}}" />
+          </l-form-item>
+            <l-form-item label='是否在前台展示' required name='status' label-placement="column">
+              <l-radio-group id='status' current="{{1}}">
+                <l-radio key="{{0}}">不显示</l-radio>
+                <l-radio key="{{1}}">显示</l-radio>
+              </l-radio-group>
+            </l-form-item>
+
+            <view slot="submit">
+              <l-button plain type='success'>确认修改</l-button>
+            </view>
+          </l-form>
+          <l-button class='pupop-close' bindtap='changeShow' plain>取消修改</l-button>
+        </l-card>
+
+
+      </view>
+    </l-popup>
+
+
+  </view>
+</view>

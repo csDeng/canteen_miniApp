@@ -1,0 +1,16 @@
+.main {
+  padding: 10rpx;
+}
+.item {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 1px solid #c7c5c5;
+  padding: 20rpx;
+}
+.item label {
+  flex: 2;
+}
+.item input {
+  flex: 5;
+}

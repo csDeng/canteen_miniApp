@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-submit-bar": "/miniprogram_npm/@vant/weapp/submit-bar/index",
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index"
+  }
+}

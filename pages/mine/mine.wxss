@@ -1,0 +1,75 @@
+/**index.wxss**/
+pages{
+  width:100%;
+}
+.main {
+  background: #f2f2f2;
+  width:100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.main .small {
+  width: 600rpx;
+  height: 600rpx;
+  border-radius: 50%;
+  background: rgb(89, 134, 231);
+  position: absolute;
+  top: -300rpx;
+  left: 75rpx;
+  z-index: 99;
+}
+.main .big {
+  width: 750rpx;
+  height: 480rpx;
+  background: rgb(0,47,147);
+  position: relative;
+  border-radius: 0 0 200rpx 200rpx;
+  margin-top:-2px;
+}
+.userinfo {
+  position: absolute;
+}
+.userinfo-avatar {
+  z-index: 999;
+  display: block;
+  overflow: hidden;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: -400rpx;
+  left: 295rpx;
+}
+.money {
+  width: 680rpx;
+  height: 200rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  line-height: 200rpx;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -100rpx;
+  box-shadow:0 0 2px rgb(0,47,147);
+}
+.nickname {
+  position: relative;
+  text-align: center;
+  width: 750rpx;
+  height: 100rpx;
+  top: -180rpx;
+  font-size: 42rpx;
+  color: #fff;
+}
+.nickname #icon {
+  padding: 0 20rpx;
+}
+.bottom_con {
+  width: 610rpx;
+  margin: 50px auto ;
+  margin-top: -54rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 0 30rpx;
+  box-shadow:0 0 2px rgb(0,47,147);
+}

@@ -1,0 +1,24 @@
+<view class="main">
+    <view class="logo">
+        <image src="../../icons/logo.png"/>
+    </view>
+   <view id="form">
+       <view class="item">
+            <label for="user_name">学 号：</label>
+            <input type="text" id="user_name" focus bindblur="getUserName" placeholder="请输入学工号" />
+       </view>
+       <view class="item">
+           <label for="pwd">密 码：</label><input type="password" id="pwd" bindblur="getpwd" placeholder="请输入6-20位的密码"/>
+       </view> 
+       <view class="item">
+            <input type="text" name="code" bindblur="getInputCode" placeholder="请输入验证码" value="{{code}}" /> 
+            <view  wx:if="{{image}}">
+                <image src="{{image}}" id="image" mode="scaleToFill" bindtap="getCode" />
+            </view>
+       </view>
+    </view>
+   <button type="primary" bindtap="userLogin">登录</button>
+   <button bindtap="gotoRegister">注册</button>
+</view>
+
+<l-message />

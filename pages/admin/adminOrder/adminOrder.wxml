@@ -1,0 +1,56 @@
+<l-message />
+
+<l-collapse>
+    <l-collapse-item
+    wx:for="{{orders}}"
+    wx:key="orders_id" 
+    wx:for-item="item"
+    title="订单号{{item.id}}">
+
+    <view class="status">
+        <view class="isPaid">
+            <view class="tips">石井餐厅<text> > </text></view>
+            <view style="color:rgb(245, 150, 150);">{{status[item.status+2]}}</view>
+        </view>
+        <view class="carts" bindtap="gotoOrderInfo" data-id="{{item.id}}">
+            <view class='productImg_cart' 
+            wx:for="{{item.carts}}"
+            wx:for-item = "item1"
+            wx:for-index = "index1"
+            wx:key="carts"
+            wx:if="{{index1<3}}">
+                <image  
+                src="{{imgBaseUrl+item1.photo}}" 
+                mode="aspectFill" />
+            </view>
+            
+        </view>
+        <view class='amount' bindtap="gotoOrderInfo" data-id="{{item.id}}" >共{{item.carts.length}}件></view>
+        <view class="isPaid">
+            <view class="tips">
+                下单时间
+            </view>
+            <view>{{item.created_at}}</view>
+            <view>合计￥{{item.total}}</view>
+        </view>       
+    </view>
+
+    <l-button id="delBtn" type="error" size="large" plain 
+    data-oid="{{item.id}}"
+    bindtap="deleteOrder"
+    > 删除订单</l-button>
+    </l-collapse-item>
+</l-collapse>
+
+<l-button size='long' plain type="warning" 
+wx:if="{{pages['current_page'] > 1}}" 
+bindtap="getOrders" data-id="-1" >
+上一页
+</l-button>
+<l-button size='long' plain type="success" 
+wx:if="{{pages['current_page'] < pages['total_pages']}}"
+bindtap="getOrders" data-id="+1"
+>
+下一页</l-button>
+
+

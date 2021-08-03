@@ -1,0 +1,146 @@
+<!-- 引入wxs脚本 -->
+<wxs module="MY" src="./sub.wxs"></wxs>
+ 
+<view class="page" style="height:{{menu.length*200}}rpx"  enable-flex="true" >
+  <l-message />
+
+  <view class="B_canteen">
+   <view class="canteen">
+    <image id="logo"  src="{{photo}}" mode='widthFix' />
+    <!-- 此处为content -->
+    <view class="introduction">
+      <view>
+        <view class='name'>{{data.name}}</view>
+        <view class='enname'>{{data['english_name']}}</view>
+        <view class="address">
+        <text
+          id="location">地址： {{data.location}}
+        </text>
+      </view>
+      </view>
+      <view id='time'>
+       {{ MY.Sub( data['breakfast_open_time'] )}}-{{ MY.Sub ( data['breakfast_close_time'] ) }} \ {{ MY.Sub ( data['lunch_open_time'] ) }}- {{ MY.Sub ( data['lunch_close_time'] )}} \ {{ MY.Sub (data['dinner_open_time'] ) }}-{{ MY.Sub ( data['dinner_close_time'] ) }}
+        </view>
+  </view>
+    </view>
+  </view>
+
+
+  <!-- 餐厅简介结束 -->
+
+  <!-- 餐单 -->
+  <!-- 左边导航栏 -->
+  <!-- 左边导航栏开始 -->
+  <view class="show" wx:if="{{menu.length!=0}}">
+    <view class="main" style="height:{{total>0? '70vh' : '78vh'}}">
+      <van-sidebar active-key="{{ activeID }}" bind:change="changeActiveId">
+        <block wx:for="{{menu}}" wx:key="menu">
+          <van-sidebar-item  data-id="{{item.id}}"  >
+          <view slot='title'>
+           <p> {{item.name  }}</p><text>\n</text> <p>{{item.english_name }}</p>
+          </view>
+           
+          </van-sidebar-item>
+        </block>
+      </van-sidebar>
+      
+      <view class="right">
+        <scroll-view id='scroll' scroll-y style="height:{{total>0? '70vh' : '78vh'}}">
+          <view wx:if="{{menu_item}}" wx:for='{{menu_item}}' wx:for-item='item1' wx:for-index='index1'
+            wx:key='menu_item' class='productBox' >
+            <image class='productImg' src="{{item1.photo}}" mode="aspectFill"  bindtap="showShop" data-obj='{{item1}}' />
+            <view class="productChoose" bindtap="showShop" data-obj='{{item1}}'>
+              <text class="productName">{{item1.name}}\n {{item1.english_name}}</text>
+              <text class="productPrice"><text id='moneyLogo'>￥</text>{{item1.price}}</text>
+            </view>
+            <view class="productAdd">
+              <image mode="widthFix" src="/icons/add.png" bindtap="productAdd" data-id="{{item1.id}}" />
+            </view>
+          </view>
+          <view wx:if="{{menu_item.length==0}}">当前分类还没有添加商品</view>
+        </scroll-view>
+      </view>
+    </view>
+
+  </view>
+  <view class="show" wx:else>
+    当前餐厅还未开始营业哦
+  </view>
+
+  <!-- 显示商品详情 -->
+  <l-popup show="{{midShow}}" content-align="center">
+    <l-card plaintext>
+      <view class="shop">
+        <view class="sName">
+          <h2>{{shop.name}}</h2>
+        </view>
+        <view class="sImage">
+          <image src='{{shop.photo}}'/>
+        </view>
+        <view class="sDesrciption">
+          <text>{{shop.description}}</text>
+        </view>
+        <view class="sSelect">
+          <l-price unit="￥" value="{{shop.price}}" />
+        <l-button special="{{true}}" id='gotoCart' bindtap="productAdd" data-id="{{shop.id}}"  >
+                <l-icon name="cart" />
+                <l-price unit="" value="加入购物车" />
+          </l-button>
+
+
+    
+        </view>
+      </view>
+    </l-card>
+  
+  </l-popup>
+  <!-- 购物车信息展示 -->
+  <l-popup show="{{show}}" content-align="bottom"  z-index:99999>
+    <l-card plaintext>
+      <!-- 此处为content -->
+      <view class="content">
+        <view wx:for='{{myCart}}' wx:for-item='item' wx:for-index='index' wx:key='myCart' class="myCart">
+          <image class='productImg_cart' src="{{imgBaseUrl+item.photo}}" mode="widthFix" />
+          <view class="cartInfo">
+            <view class="cartName">{{item.name}}</view>
+            <view class="cartPrice">￥{{item.price}}</view>
+          </view>
+
+          <view class="amount">
+            <view class='addMius'>
+                <image mode="widthFix" src="/icons/mius.png" id="mius" bindtap="mius" data-id="{{item.id}}" />
+            </view>
+            <view id="num">
+              <text>{{item.amount}}</text>
+            </view>
+            <view class='addMius'>
+              <image mode="widthFix" src="/icons/add_s.png" id="add" bindtap="add" data-cid="{{item.id}}" />
+              <!-- <text id="add" bindtap="add" data-cid="{{item.id}}"></text> -->
+            </view>
+
+          </view>
+        </view>
+      </view>
+      <view class="btn">
+        <van-button type="warning" custom-style="width:300rpx" hairline plain bind:click="close">关闭</van-button>
+        <van-button type="primary" custom-style="width:300rpx" hairline plain bind:click="gotoPay">结算</van-button>
+      </view>
+    </l-card>
+  
+  
+  
+  
+  
+  <!-- 菜单弹出框 -->
+  </l-popup >
+
+
+  <van-goods-action  wx:if="{{total>0}}" safe-area-inset-bottom="{{true}}" >
+    <van-goods-action-icon icon="cart-o" text="查看购物车" info="{{total}}" bind:click="showCart" />
+    <van-goods-action-button text="立即预约" bind:click="gotoPay" margin-right="30rpx" color="rgb(0,47,147)"  />
+  </van-goods-action>
+  <!-- 购物车结束 -->
+
+
+
+</view>

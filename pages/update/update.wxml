@@ -1,0 +1,82 @@
+<l-card plaintext>
+  <!-- 自定义描述内容 -->
+<l-steps direction="column" active-index='13'>
+  <l-step title="2020-12-1">
+    <view class="describe-container" slot="describe">
+      项目组成员确定
+    </view>
+  </l-step>
+  <l-step title="项目分工">
+    <view class="describe-container" slot="describe">
+      <ul>       
+        <li>项目经理：刘星廷</li><text>\n</text>
+        <li>后端开发：余圳曦</li><text>\n</text>
+        <li>前端开发：邓崇森</li><text>\n</text>
+        <li>UI设计：邓宇鹏</li><text>\n</text>
+      </ul>
+    </view>
+  </l-step>
+    <l-step title="2020-12-10">
+    <view class="describe-container" slot="describe">
+      前端基本功能完成
+    </view>
+  </l-step>
+
+  <l-step title="2021-1-20">
+    <view class="describe-container" slot="describe">
+      前后端基本功能联调完毕，等待一卡通功能完成
+    </view>
+  </l-step>
+  <l-step title="2021-4-1">
+    <view class="describe-container" slot="describe">
+      一卡通初步交付，但因前后耦合渲染，不适合小程序使用，所以回炉重造
+    </view>
+  </l-step>
+  <l-step title="2021-4-2">
+    <view class="describe-container" slot="describe">
+      修复部分样式
+    </view>
+  </l-step>
+  <l-step title="2021-4-27">
+    <view class="describe-container" slot="describe">
+      信息中心联系安全测试
+    </view>
+  </l-step>
+  <l-step title="2021-5-7">
+    <view class="describe-container" slot="describe">
+      测试结果出来，修复安全漏洞，等待再次测试
+    </view>
+  </l-step>
+  <l-step title="2021-5-11">
+    <view class="describe-container" slot="describe">
+      修改订单以及订单管理的样式，联调订单打印机
+    </view>
+  </l-step>
+  <l-step title="2021-5-12">
+    <view class="describe-container" slot="describe">
+      通过安全测试，并发现一个官方bug<text>\n</text>
+      用户第一次登陆的时候，可能会导致缓存获取失败，已向腾讯小程序官方反馈
+    </view>
+  </l-step>
+  <l-step title="2021-5-15">
+    <view class="describe-container" slot="describe">
+      更正登录信息丢失bug,去除每次重新登陆的重复流程
+    </view>
+  </l-step>
+  <l-step title="2021-5-18">
+    <view class="describe-container" slot="describe">
+      第一次样式重构完毕，上线测试
+    </view>
+  </l-step>
+  <l-step title="2021-6-1">
+    <view class="describe-container" slot="describe">
+      需求大改，项目重构
+    </view>
+  </l-step>
+  <l-step title="2021-6-10">
+    <view class="describe-container" slot="describe">
+      加媒体查询，适配以i5为代表的小屏幕手机
+    </view>
+  </l-step>
+</l-steps>
+</l-card>

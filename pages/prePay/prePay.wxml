@@ -1,0 +1,38 @@
+<view class="pages">
+    <view class="userInfo">
+        <view class="name">{{name}}</view>
+        <view class="num">{{stu_num}}</view>
+        <view class="section">
+            <picker mode="time" value="{{time||now}}" start="{{now}}" end="23:59" bindchange="bindTimeChange">
+                <view class="picker">
+                    请选择用餐时间 <text style="color:rgb(137, 230, 230);">{{time||now}}</text>
+                </view>
+            </picker>
+        </view>
+    </view>
+
+
+
+    <view class="body">
+        <view wx:for='{{myCart}}' wx:for-item='item' wx:for-index='index' wx:key='myCart' class="myCart">
+            <view class='productImg_cart'>
+                <image src="{{imgBaseUrl+item.photo}}" mode="aspectFill" />
+            </view>
+
+            <view class="cartInfo">
+                <view class="cartName">{{item.name}}</view>
+                <view class="amount">x{{item.amount}}</view>
+            </view>
+            <view class="cartPrice">￥{{item.price}}</view>
+        </view>
+    </view>
+
+    <!-- 备注 -->
+    <view class="leave">
+        <van-field label="备注" placeholder="口味、偏好" border="{{ false }}" bind:change="getcomments" />
+    </view>
+    <view>
+        <van-submit-bar safe-area-inset-bottom price="{{ money*100 }}" button-text="确定预约" bind:submit="ok" custom-class='precub'  />
+    </view>
+</view>
+<l-message />

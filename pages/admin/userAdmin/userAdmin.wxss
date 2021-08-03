@@ -1,0 +1,10 @@
+
+/* 操作按钮样式 */
+#btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btnItem{
+  padding:15rpx 100rpx;
+}

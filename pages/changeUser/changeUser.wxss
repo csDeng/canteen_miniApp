@@ -1,0 +1,8 @@
+.btn{
+    display: flex;
+
+}
+
+.btn view{
+    padding:10rpx 66rpx;
+}

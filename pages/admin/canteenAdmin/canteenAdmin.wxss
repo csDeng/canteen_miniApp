@@ -1,0 +1,34 @@
+page {
+  font-size: small;
+}
+.productImg {
+  width: 160rpx;
+  height: 120rpx;
+  padding: 20rpx;
+  border-radius: 50rpx;
+}
+.productChoose {
+  position: relative;
+}
+.productName {
+  position: absolute;
+  left: 30vw;
+}
+.productPrice {
+  position: absolute;
+  left: 30vw;
+  top: 130rpx;
+}
+.peoductAdd {
+  position: absolute;
+  left: 60vw;
+  top: 130rpx;
+}
+.admin {
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+#time {
+  font-size: small;
+}

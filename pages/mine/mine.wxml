@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="main">
+  <view class="line"></view>
+  <view class="small"></view>
+  <view class="big"></view>
+  <view class="userinfo">
+    <block>
+      <view class="userinfo-avatar" >
+        <open-data type="userAvatarUrl"/>
+      </view>
+        <view class="nickname">{{name}}</view>
+      
+    </block>
+  </view>
+
+  <view class="money">
+    校园一卡通信息
+  </view>
+
+  <view class="bottom_con">
+
+  <l-list class='item' title="关于"  image="/icons/about.png" desc="程序简介"   bindtap="gotoAbout"/>
+  <l-list class='item' title="反馈" image="/icons/feedback.png" desc="问题反馈"  bindtap='gotofeedback'/>
+  <l-list class='item' title="更新日志" image="/icons/log.png" desc="程序开发时间骨架图"  bindtap='gotoUpdate' /> 
+  <l-list class='item' title="修改信息" image="/icons/my.png" desc="修改用户的基本信息"  bindtap='gotoUser'/> 
+  <l-list class='item' title="退出登陆" image="/icons/login.png" desc="退出后登录信息失效"  bindtap='gotologin'/>
+  <l-list class='item' title="我是管理员" desc="餐厅管理人员接单等相关操作" image="/icons/admin.png" l-class-icon="iconfont" bindtap='gotoAdmin' wx:if="{{power===1}}"/>
+
+  </view>
+</view>
+  
+<l-message />

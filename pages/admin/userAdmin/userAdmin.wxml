@@ -1,0 +1,91 @@
+<view class="main">
+  <!-- 添加用户按钮 -->
+  <l-button bindtap="addUser" size='long' plain="true" type='success'>添加用户</l-button>
+
+
+  <!-- type 指定为手风琴模式 -->
+  <l-collapse type="accordion">
+    <l-collapse-item wx:for="{{userList}}" wx:for-item='item' wx:for-index='index' wx:key="id" title="{{item.name}}">
+      <l-card plaintext="{{true}}">
+        <view>id:{{item.id}}</view>
+        <view>
+          姓名：{{item.name}}
+        </view>
+        <view>
+          学号：{{item.stu_id}}
+        </view>
+        <view>
+          身份：<text wx:if="{{item.power===0}}">普通用户</text><text wx:else>管理员</text>
+        </view>
+        <view>创建时间：{{item.created_at}}</view>
+        <view>信息更新时间：{{item.updated_at}}</view>
+        <view>上次登录:{{item.last_login}}</view>
+      </l-card>
+      <view id='btn'>
+        <l-button plain shape="square" class="btnItem" bindtap="changeUser" 
+        data-id='{{item.stu_id}}'>修改信息</l-button>
+        <l-button plain type="warning" class="btnItem"  shape="square" bindtap="delUser" data-id="{{item.id}}">删除用户</l-button>
+      </view>
+
+    </l-collapse-item>
+  </l-collapse>
+
+  <l-button size='long' plain type="warning" 
+wx:if="{{pages['current_page'] > 1}}" 
+bindtap="getpage" data-id="-1" >
+上一页
+</l-button>
+<l-button size='long' plain type="success" 
+wx:if="{{pages['current_page'] < pages['total_pages']}}"
+bindtap="getpage" data-id="+1"
+>
+下一页</l-button>
+
+
+  <l-popup show="{{show}}" content-align="top" locked="{{true}}">
+    <view class='pupop-content'>
+    <l-card plaintext='{{true}}'>
+          <l-form name="user" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit" bind:linreset='reset'>
+        <l-form-item label="用户名:" name="name">
+          <l-input id="name" value="{{user.name}}" hide-label 
+          show-row="{{false}}" />
+        </l-form-item>
+
+        <l-form-item label="学号:" name="stu_id">
+          <l-input id="stu_id" value="{{user.stu_id}}" hide-label show-row="{{false}}"
+            auto-height="{{true}}" border="{{false}}" />
+        </l-form-item>
+        <l-form-item label="密码:" name="password" required>
+          <l-input id="password" 
+          placeholder="请输入6位以上的新密码"
+          value="{{user.password}}"
+           hide-label show-row="{{false}}" />
+        </l-form-item>
+
+        <l-form-item label='是否在前台展示'  required
+        name='status' label-placement="column" >
+          <l-radio-group id='status' current="{{1}}" >
+         <l-radio key="{{0}}" >不显示</l-radio>
+        <l-radio key="{{1}}">显示</l-radio>
+      </l-radio-group>
+      </l-form-item>
+      <l-form-item label='身份' name='power' rules = "{{Rule}}" label-placement="column">
+          <l-radio-group  id='power' current="0">
+         <l-radio key="0">普通用户</l-radio>
+        <l-radio key="1">管理员</l-radio>
+      </l-radio-group>
+        </l-form-item>
+
+
+
+        <view slot="submit">
+          <l-button plain type='success'>确认添加</l-button>
+        </view>
+      </l-form> 
+      <l-button class='pupop-close' bindtap='changeShow' plain>关闭弹出层</l-button>
+    </l-card>
+
+     
+    </view>
+  </l-popup>
+</view>

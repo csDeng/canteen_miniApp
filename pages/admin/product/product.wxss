@@ -1,0 +1,7 @@
+page{
+  font-size:small;
+}
+#btnAdmin{
+  display: flex;
+  justify-content: space-around;
+}

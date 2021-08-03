@@ -1,0 +1,32 @@
+@import "../../app.wxss";
+.logo{
+    width:26vw;
+    /* height:25vh; */
+    margin:30rpx auto;
+    display: flex;
+    
+}
+
+.item{
+    width:80vw;
+    margin:0 auto;
+    display: flex;
+    border-bottom: 1px solid rgb(199, 197, 197);
+    padding:20rpx;
+}
+.item label{
+    flex:2;
+}
+.item input{
+    flex:5;
+}
+button{
+    margin-top:20rpx;
+    padding:10rpx;
+}
+
+#image{
+    width:145px;
+    height: 40px;
+    margin-right:13px;
+}

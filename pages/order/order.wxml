@@ -1,0 +1,37 @@
+<l-message />
+
+<view class="pages">
+    <view class="item" 
+    wx:for="{{orders}}"
+    wx:key="orders" 
+    wx:for-item="item"
+    wx:for-index="index"
+    id="{{index==orders.length-1?'last':''}}"
+    >
+        <view class="isPaid">
+            <view class="tips" class="name" bindtap="gotoCanteen" data-id="{{item['canteen_id']}}">{{item.canteen_name}}<text> > </text></view>
+            <view style="color:rgb(245, 150, 150);"  class="name" >{{status[item.status+2]}}</view>
+        </view>
+        <view class="carts" bindtap="gotoOrderInfo" data-id="{{item.id}}">
+            <view class='productImg_cart' 
+            wx:for="{{item.carts}}"
+            wx:for-item = "item1"
+            wx:for-index = "index1"
+            wx:key="carts"
+            wx:if="{{index1<3}}">
+                <image  
+                src="{{imgBaseUrl+item1.photo}}" 
+                mode="aspectFill" />
+            </view>
+            
+        </view>
+        <view class='amount' bindtap="gotoOrderInfo" data-id="{{item.id}}" >共{{item.carts.length}}件></view>
+        <view class="isPaid">
+            <view class="tips">
+                下单时间
+            </view>
+            <view>{{item.created_at}}</view>
+            <view>合计￥{{item.total}}</view>
+        </view>
+    </view>
+</view>
