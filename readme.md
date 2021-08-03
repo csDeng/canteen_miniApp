@@ -10,7 +10,7 @@
 * js-sha-1
 
 # 部分界面
-
+(图片位于pics中)
 ![image-20210803231216445](C:\Users\dcs\WeChatProjects\石井餐厅\pics\image-20210803231216445.png)
 
 
